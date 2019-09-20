@@ -1,0 +1,10 @@
+  db:
+    image: mysql:5.7
+    ports:
+      - "2100:3306"
+    environment:
+      MYSQL_USER: root
+      MYSQL_ROOT_PASSWORD: super-secret-password
+      MYSQL_DATABASE: sandbox
+    volumes:
+        - ./schema.sql:/data/application/schema.sql
